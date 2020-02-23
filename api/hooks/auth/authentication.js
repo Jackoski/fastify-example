@@ -1,6 +1,5 @@
-module.exports = async function (req, res) {
-  await console.log(req.params);
-  // This hook will always be executed after the shared `preValidation` hooks
-  await console.log("auth hook called!");
-  return;
+module.exports = function (req, res, done) {
+  // This hook will be always fired before handler...
+  console.log("auth hook called!");
+  done()
 };

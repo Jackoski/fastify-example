@@ -7,10 +7,12 @@ module.exports = {
       id: { type: 'string', format: "uuid" },
     },
   },
+  required: ['response'],
   response: {
     // you can use string like '2xx' to cover more status codes if there might be more responses
     200: {
       type: 'object',
+      required: ['someAnotherFiled'],
       properties: {
         pirate: {
           properties: {
@@ -21,6 +23,7 @@ module.exports = {
             age: { type: 'number' },
           },
         },
+        someAnotherFiled: { type: 'string' },
       },
     },
     // you can and more reposnses for more status codes

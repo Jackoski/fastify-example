@@ -1,6 +1,6 @@
 // create custom path
 require('module-alias/register');
-// load env vars
+// load env var
 require('dotenv').config();
 const fastify = require('fastify')({ logger: true });
 
